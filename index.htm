@@ -1,0 +1,141 @@
+﻿<!DOCTYPE html>
+<html>
+<head>
+    <title>Market Links</title>
+    <link rel="stylesheet" type="text/css" href="markets.css" />
+    <script src="http://code.jquery.com/jquery-1.11.0.min.js"></script>
+    <script type="text/javascript">window.jQuery || document.write('<script type="text/javascript" src="../scripts/jquery-1.11.0.min.js"><\/script>')</script>
+    <script  type="text/javascript" src="markets.js">
+        /// <reference path="../scripts/jquery-2.0.0-vsdoc.js" />
+    </script>
+    
+</head>
+<body>
+    <div id="header">
+    </div>
+    <div id="container">
+        <div id="center" class="column">
+            <iframe name="frame" id="frame" src="http://stockcharts.com/freecharts/marketsummary.html"></iframe>
+        </div>
+        <div id="left" class="column">
+            <label id="LabelSrc" class="label">
+                Chart:</label>
+            <select id="SelectQuoteSrc" class="select" title="Select a Chart Type.">
+                <option value="FV">Finviz</option>
+                <option value="PT">Position</option>                
+                <option value="ST">Swing</option>
+                <option value="DT">Daily</option>
+                <option value="OP" selected>Options</option>
+                <option value="EL">Elder</option>
+                <option value="RT">Real Time</option>         
+                <option value="ES">ETF RR</option>
+                <option value="SC">Stock Cons</option>  
+            </select>
+            <p></p>
+            <label id="tickerlabel" class="label">
+                Ticker:</label>
+            <input type="text" id="tickertext" title="Type a ticker and Click Go.">
+            <input type="submit" id="go" value="Go"> 
+            <ul id="etflist">
+                <li><a target="frame" href="javascript: void(0)">DIA</a></li>
+                <li><a target="frame" href="javascript: void(0)">SPY</a></li>
+                <li><a target="frame" href="javascript: void(0)">QQQ</a></li>
+                <li><a target="frame" href="javascript: void(0)">IWM</a></li>
+                <li><a target="frame" href="javascript: void(0)">EFA</a></li>
+                <li><a target="frame" href="javascript: void(0)">EEM</a></li>
+                <li><a target="frame" href="javascript: void(0)">TLT</a></li>                
+                <li><a target="frame" href="javascript: void(0)">GLD</a></li>
+                <li><a target="frame" href="javascript: void(0)">SLV</a></li>
+                <li><a target="frame" href="javascript: void(0)">USO</a></li>
+                <li><a target="frame" href="javascript: void(0)">GDX</a></li>                              
+                <li><a target="frame" href="javascript: void(0)">VXX</a></li>                                           
+                <br>
+                <li><a target="frame" href="javascript: void(0)">XLP</a></li>
+                <li><a target="frame" href="javascript: void(0)">XLV</a></li>
+                <li><a target="frame" href="javascript: void(0)">XLU</a></li>
+                <li><a target="frame" href="javascript: void(0)">XLK</a></li>
+                <li><a target="frame" href="javascript: void(0)">XLY</a></li>
+                <li><a target="frame" href="javascript: void(0)">XLI</a></li>
+                <li><a target="frame" href="javascript: void(0)">XLE</a></li>
+                <li><a target="frame" href="javascript: void(0)">XLB</a></li>
+                <li><a target="frame" href="javascript: void(0)">XLF</a></li>
+                <br>
+                <li><a target="frame" href="javascript: void(0)">AAPL</a></li>
+                <li><a target="frame" href="javascript: void(0)">GOOGL</a></li>
+                <li><a target="frame" href="javascript: void(0)">AMZN</a></li>
+                <li><a target="frame" href="javascript: void(0)">FB</a></li>
+                <li><a target="frame" href="javascript: void(0)">NFLX</a></li>
+                <li><a target="frame" href="javascript: void(0)">BABA</a></li>
+                <br>                                
+                <li><a target="frame" href="javascript: void(0)">F</a></li>
+                <li><a target="frame" href="javascript: void(0)">T</a></li>
+                <li><a target="frame" href="javascript: void(0)">BAC</a></li>
+                <li><a target="frame" href="javascript: void(0)">GS</a></li>
+                <li><a target="frame" href="javascript: void(0)">MSFT</a></li>                     
+                <li><a target="frame" href="javascript: void(0)">INTC</a></li>
+            </ul>
+        </div>
+        <div id="right" class="column">
+            <ul>
+                <li><a target="frame" href="http://money.cnn.com/data/fear-and-greed/?iid=MKT_Sub">FearorGreed</a></li>
+                <li><a target="frame" href="http://www.multpl.com/">Multiple</a></li>
+                <li><a target="frame" href="http://www.morningstar.com/market-valuation/market-fair-value-graph.aspx">MarketValuation</a></li>
+                <li><a target="frame" href="http://stockcharts.com/freecharts/candleglance.html?$NYSI,$NASI">McSummation</a></li>
+                <li><a target="frame" href="http://stockcharts.com/freecharts/candleglance.html?$NYAD,$NYHL,$NAAD,$NAHL,$AMAD,$AMHL">MarketBreadth</a></li>
+                <li><a target="frame" href="http://stockcharts.com/freecharts/candleglance.html?$BPNYA,$BPCOMPQ,$BPOEX,$BPNDX,$BPSPX,$BPINDU">IndexBullish%</a></li>
+                <li><a target="frame" href="http://stockcharts.com/freecharts/marketsummary.html"><b>MarketSummary</b></a></li>                    
+                <li><a target="frame" href="http://stockcharts.com/freecharts/candleglance.html?XLB,XLE,XLF,XLI,XLK,XLP,XLRE,XLU,XLV,XLY,$INDU,$SPX"><b>SPSectors</b></a></li>
+                <li><a target="frame" href="http://stockcharts.com/freecharts/candleglance.html?[DOW]"><b>DowStocks</b></a></li>
+            </ul>
+            <ul>
+                <li><a target="null" href="https://www.etfchannel.com">ETFChannel</a></li>
+                <li><a target="null" href="http://www.etf.com">ETF</a></li>
+                <li><a target="null" href="http://etfdb.com">ETFDb</a></li>
+                <li><a target=" frame" href="http://www.etfscreen.com/index.php">ETFScreen</a></li>
+                <li><a target="frame" href="http://stockcharts.com/freecharts/candleglance.html?VTI,VEA,VWO,BND,MUB,LQD,BNDX,EMLC,VNQ,RWX,IAU,SLV"><b>ETFGlance</b></a></li>
+                <li><a target="frame" href="http://www.etfreplay.com/combine.aspx">ETFReplay</a></li>
+            </ul>
+            <ul>
+               <li><a target="frame" href="http://finviz.com/">Finviz</a></li>                
+                <li><a target="null" href="http://seekingalpha.com/">SeekingAlpha</a></li>
+                <li><a target="frame" href="http://www.dividenddetective.com/">DividendDetect</a></li>
+                <li><a target="null" href="https://www.dividendchannel.com/">DividendChannel</a></li>
+                <li><a target="frame" href="http://www.earningswhispers.com/calendar.asp">EarningsCalendar</a></li>
+                <li><a target="null" href="http://www.serenitystocks.com/">Serenity</a></li>
+                <li><a target="frame" href="http://www.valueexplorer.com/">ValueExplorer</a></li>              
+            </ul>
+            <ul>
+                <li><a target="null" href="https://www.stockoptionschannel.com/">StockOptChannel</a></li>
+                <li><a target="null" href="https://www.doubledividendstocks.com/index.php">DblDividendStocks</a></li>
+                <li><a target="frame" href="http://www.cboe.com/trading-tools/calculators"><b>Options Tools</b></a></li>
+                <li><a target="frame" href="http://www.ivolatility.com"><b>IVolatility</b></a></li>
+                <li><a target="frame" href="https://ivx.ivolatility.com/ivx/ivx.html"><b>IVX monitor</b></a></li>
+                <li><a target="frame" href="http://www.ivolatility.com/calc/?ticker=QQQ"><b>IVolValueCalc</b></a></li>
+                <li><a target="frame" href="http://www.ivolatility.com/custom/pbc/"><b>IVolProbCalc</b></a></li>
+
+                <li><a target="frame" href="http://www.optionistics.com/calculators/probability-calculator">OptProbCalc</a></li>
+                <li><a target="frame" href="http://www.optionistics.com/screener/volatility-skew">OptVolatilitySkew</a></li>
+
+                <li><a target="frame" href="http://www.swing-trading-options.com/index.html"><b>SwingTrdOptions</b></a></li>
+                <li><a target="frame" href="https://www.optionsplaybook.com/"><b>Options Playbook</b></a></li>                                
+                <li><a target="frame" href="http://www.schaeffersresearch.com/education">Schaeffers</a></li>
+                <li><a target="null" href="http://www.optionseducation.org/tools/virtual_trading_system.html">OptVirtualTrd</a></li>
+                <li><a target="null" href="http://www.optionseducation.org/tools/position_simulator.html">OptPosSimulator</a></li>
+            </ul>
+            <ul>
+                <li><a target="null" href="https://www.bankofamerica.com/index.jsp">BofA</a></li>
+                <li><a target="null" href="https://olui2.fs.ml.com/login/login.aspx">MLEdge</a></li>
+                <li><a target="null" href="https://personal.vanguard.com/us/home?fromPage=portal">Vanguard</a></li>
+                <li><a target="null" href="https://www.benefits.ml.com">MLBenefitsOL</a></li>
+                <li><a target="null" href="http://resources.hewitt.com/jnjbsc/">JNJBenefits</a></li> 
+                <li><a target="null" href="https://hg.schwab.com/client/#/login?return=%2Fpublic%2Fintelligent%2Fhome.html">Schwab IP</a></li> 
+                <li><a target="null" href="https://www.schwab.com/public/schwab/client_home">Schwab</a></li>
+                <li><a target="null" href="https://myhealth.bankofamerica.com/login.aspx">HSA</a></li>
+                              
+            </ul>
+        </div>
+    </div>
+    <div id="footer">
+    </div>
+</body>
+</html>
