@@ -1,4 +1,4 @@
-/// <reference path='../scripts/jquery-2.0.0-vsdoc.js' />
+/// <reference path='./scripts/jquery-2.0.0-vsdoc.js' />
 
     function getSQURL(ticker, source) {
         var localticker = ticker.toString().toUpperCase()
