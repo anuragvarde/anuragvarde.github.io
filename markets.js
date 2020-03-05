@@ -38,8 +38,8 @@
         var URL = getSQURL(enteredticker, tickersrc);
         //alert(URL)
         if (URL != "") { 
-           //$('#frame').attr('src',URL);          
-           window.open(URL, '_blank');
+           $('#center').html('<object id="frame" class="frame" type="text/html" data="' + URL + '"/>');        
+           //window.open(URL, '_blank');
         }
 
     };
@@ -61,7 +61,25 @@
             setFrameSrc($('#tickertext').val(), $('#SelectQuoteSrc').val())
         });
 
-        $('#etflist a').on('click', function(){
+        $('#etflist a').on('click', function(event){
             loadticker($(this).text(), $('#SelectQuoteSrc').val());
+            return false; 
+            //event.preventDefault();
+            
+        });
+
+        $('#tickertext').keypress(function(event) {
+            if (event.which == 13 ) {
+               setFrameSrc($('#tickertext').val(), $('#SelectQuoteSrc').val());
+            }
+        });
+
+        $('#links a').on('click', function(){
+            if ($(this).attr('href') != "") { 
+                //alert($(this).attr('href'));
+                $('#center').html('<object id="frame" class="frame" type="text/html" data="' + $(this).attr('href') + '"/>');
+                //return false; 
+            //event.preventDefault();
+            }
         });
     })
