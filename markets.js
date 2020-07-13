@@ -38,8 +38,9 @@
         var URL = getSQURL(enteredticker, tickersrc);
         //alert(URL)
         if (URL != "") { 
-           $('#center').html('<object id="frame" class="frame" type="text/html" data="' + URL + '"/>');        
-           //window.open(URL, '_blank');
+           //$('#center').html('<object id="frame" class="frame" type="text/html" data="' + URL + '"/>');        
+           mywindow = window.open(URL, '_blank');
+           mywindow.focus();
         }
 
     };
