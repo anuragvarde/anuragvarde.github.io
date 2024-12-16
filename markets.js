@@ -79,7 +79,7 @@
             if ($(this).attr('href') != "") { 
                 //alert($(this).attr('href'));
                 $('#center').html('<object id="frame" class="frame" type="text/html" data="' + $(this).attr('href') + '"/>');
-                mywindow.refresh();
+                window.location.reload();
                 //return false; 
             //event.preventDefault();
             }
