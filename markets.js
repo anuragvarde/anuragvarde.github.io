@@ -40,6 +40,7 @@
         if (URL != "") { 
            //$('#center').html('<object id="frame" class="frame" type="text/html" data="' + URL + '"/>');        
            mywindow = window.open(URL, '_blank');
+           window.location.reload();
            mywindow.focus();
         }
 
@@ -79,7 +80,6 @@
             if ($(this).attr('href') != "") { 
                 //alert($(this).attr('href'));
                 $('#center').html('<object id="frame" class="frame" type="text/html" data="' + $(this).attr('href') + '"/>');
-                window.location.reload();
                 //return false; 
             //event.preventDefault();
             }
