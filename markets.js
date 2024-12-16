@@ -40,8 +40,8 @@
         if (URL != "") { 
            $('#center').html('<object id="frame" class="frame" type="text/html" data="' + URL + '"/>');        
            //mywindow = window.open(URL, '_blank');
-           window.referrer.location.reload();
            //mywindow.focus();
+        //window.referrer.location.reload();
         }
 
     };
