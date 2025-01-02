@@ -41,7 +41,7 @@
            $('#center').html('<object id="frame" class="frame" type="text/html" data="' + URL + '"/>');        
            mywindow = window.open(URL, '_blank');
            mywindow.focus();
-           window.location.reload();
+           //window.location.reload();
         }
 
     };
