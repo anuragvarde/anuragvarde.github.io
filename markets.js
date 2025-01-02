@@ -83,5 +83,7 @@
                 //return false; 
             //event.preventDefault();
             }
-        });
+        }
+        window.location.reload();              
+        );
     })
