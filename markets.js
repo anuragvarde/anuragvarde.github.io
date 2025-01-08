@@ -13,8 +13,8 @@
             case "DT":
                 return "http://stockcharts.com/h-sc/ui?s=" + localticker + "&p=D&yr=0&mn=6&dy=0&id=p06749700604";
             case "OP":
-                return "http://stockcharts.com/h-sc/ui?s=" + localticker + "&p=D&yr=0&mn=6&dy=0&id=p04822738762";
-                //old p43267027058
+                return "http://stockcharts.com/h-sc/ui?s=" + localticker + "&p=D&yr=0&mn=6&dy=0&id=p91690559751";
+                //old p04822738762 p43267027058
             case "EL":
                 return "http://stockcharts.com/h-sc/ui?s=" + localticker + "&p=D&yr=0&mn=6&dy=0&id=p97376413214";
             case "ST":
