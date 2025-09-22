@@ -1,25 +1,21 @@
 ﻿<!DOCTYPE html>
-<html>
+<html lang="en">
 <head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Market Links</title>
     <link rel="stylesheet" type="text/css" href="markets.css" />
     <script src="https://code.jquery.com/jquery-3.4.1.min.js"></script>
-    <script type="text/javascript">if(!window.jQuery){document.write('<script src="https://code.jquery.com/jquery-3.4.1.min.js"><\/script>')}</script>
-    <script  type="text/javascript" src="markets.js">
-        /// <reference path="../scripts/jquery-2.0.0-vsdoc.js" />
-    </script>
-    
+    <script type="text/javascript" src="markets.js"></script>
 </head>
 <body>
-    <div id="header">
-    </div>
+    <div id="header"></div>
     <div id="container">
         <div id="center" class="column">
             <object id="frame" class="frame" type="text/html" data="https://www.multpl.com"></object>
         </div>
         <div id="left" class="column">
-            <label id="LabelSrc" class="label">
-                Chart:</label>
+            <label id="LabelSrc" class="label" for="SelectQuoteSrc">Chart:</label>
             <select id="SelectQuoteSrc" class="select" title="Select a Chart Type.">
                 <option value="FV">Finviz</option>
                 <option value="RT">CNBC</option>         
@@ -30,55 +26,53 @@
                 <option value="DT">Daily</option>
                 <option value="OP" selected>Options</option>
                 <option value="EL">Elder</option>
-
             </select>
             <p></p>
-            <label id="tickerlabel" class="label">
-                Ticker:</label>
+            <label id="tickerlabel" class="label" for="tickertext">Ticker:</label>
             <input type="text" id="tickertext" title="Enter a ticker.">
             <input type="submit" id="go" value="Go"> 
             <ul id="etflist">
-                <li><a target="null" href="javascript: void(0)">DIA</a></li>
-                <li><a target="null" href="javascript: void(0)">SPY</a></li>
-                <li><a target="null" href="javascript: void(0)">QQQ</a></li>
-                <li><a target="null" href="javascript: void(0)">IWM</a></li>
-                <li><a target="null" href="javascript: void(0)">EFA</a></li>
-                <li><a target="null" href="javascript: void(0)">EEM</a></li>
-                <li><a target="null" href="javascript: void(0)">TLT</a></li>                
-                <li><a target="null" href="javascript: void(0)">GLD</a></li>
-                <li><a target="null" href="javascript: void(0)">SLV</a></li>
-                <li><a target="null" href="javascript: void(0)">USO</a></li>
-                <li><a target="null" href="javascript: void(0)">GDX</a></li>                              
-                <li><a target="null" href="javascript: void(0)">VXX</a></li>                                           
+                <li><a href="javascript: void(0)">DIA</a></li>
+                <li><a href="javascript: void(0)">SPY</a></li>
+                <li><a href="javascript: void(0)">QQQ</a></li>
+                <li><a href="javascript: void(0)">IWM</a></li>
+                <li><a href="javascript: void(0)">EFA</a></li>
+                <li><a href="javascript: void(0)">EEM</a></li>
+                <li><a href="javascript: void(0)">TLT</a></li>                
+                <li><a href="javascript: void(0)">GLD</a></li>
+                <li><a href="javascript: void(0)">SLV</a></li>
+                <li><a href="javascript: void(0)">USO</a></li>
+                <li><a href="javascript: void(0)">GDX</a></li>                              
+                <li><a href="javascript: void(0)">VXX</a></li>                                           
                 <br>
-                <li><a target="null" href="javascript: void(0)">XLP</a></li>
-                <li><a target="null" href="javascript: void(0)">XLV</a></li>
-                <li><a target="null" href="javascript: void(0)">XLU</a></li>
-                <li><a target="null" href="javascript: void(0)">XLK</a></li>
-                <li><a target="null" href="javascript: void(0)">XLY</a></li>
-                <li><a target="null" href="javascript: void(0)">XLI</a></li>
-                <li><a target="null" href="javascript: void(0)">XLE</a></li>
-                <li><a target="null" href="javascript: void(0)">XLB</a></li>
-                <li><a target="null" href="javascript: void(0)">XLF</a></li>
-                <li><a target="null" href="javascript: void(0)">XLC</a></li>
-                <li><a target="null" href="javascript: void(0)">XLRE</a></li>
+                <li><a href="javascript: void(0)">XLP</a></li>
+                <li><a href="javascript: void(0)">XLV</a></li>
+                <li><a href="javascript: void(0)">XLU</a></li>
+                <li><a href="javascript: void(0)">XLK</a></li>
+                <li><a href="javascript: void(0)">XLY</a></li>
+                <li><a href="javascript: void(0)">XLI</a></li>
+                <li><a href="javascript: void(0)">XLE</a></li>
+                <li><a href="javascript: void(0)">XLB</a></li>
+                <li><a href="javascript: void(0)">XLF</a></li>
+                <li><a href="javascript: void(0)">XLC</a></li>
+                <li><a href="javascript: void(0)">XLRE</a></li>
                 <br>
-                <li><a target="null" href="javascript: void(0)">VT</a></li>
-                <li><a target="null" href="javascript: void(0)">VTI</a></li>
-                <li><a target="null" href="javascript: void(0)">VXUS</a></li>
-                <li><a target="null" href="javascript: void(0)">BND</a></li>
-                <li><a target="null" href="javascript: void(0)">BNDX</a></li>
-                <li><a target="null" href="javascript: void(0)">BSV</a></li>
-                <li><a target="null" href="javascript: void(0)">DBC</a></li>
+                <li><a href="javascript: void(0)">VT</a></li>
+                <li><a href="javascript: void(0)">VTI</a></li>
+                <li><a href="javascript: void(0)">VXUS</a></li>
+                <li><a href="javascript: void(0)">BND</a></li>
+                <li><a href="javascript: void(0)">BNDX</a></li>
+                <li><a href="javascript: void(0)">BSV</a></li>
+                <li><a href="javascript: void(0)">DBC</a></li>
                 <br>                                
-                <li><a target="null" href="javascript: void(0)">VIG</a></li>
-                <li><a target="null" href="javascript: void(0)">VYM</a></li>
-                <li><a target="null" href="javascript: void(0)">VNQ</a></li>
-                <li><a target="null" href="javascript: void(0)">PFF</a></li>
-                <li><a target="null" href="javascript: void(0)">VGIT</a></li>                     
-                <li><a target="null" href="javascript: void(0)">VGSH</a></li>
-                <li><a target="null" href="javascript: void(0)">TIP</a></li>
-                <li><a target="null" href="javascript: void(0)">STIP</a></li>
+                <li><a href="javascript: void(0)">VIG</a></li>
+                <li><a href="javascript: void(0)">VYM</a></li>
+                <li><a href="javascript: void(0)">VNQ</a></li>
+                <li><a href="javascript: void(0)">PFF</a></li>
+                <li><a href="javascript: void(0)">VGIT</a></li>                     
+                <li><a href="javascript: void(0)">VGSH</a></li>
+                <li><a href="javascript: void(0)">TIP</a></li>
+                <li><a href="javascript: void(0)">STIP</a></li>
             </ul>
         </div>
         <div id="right" class="column">

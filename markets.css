@@ -1,58 +1,64 @@
-﻿body {
-  min-width: 310px;      /* 2x LC width + RC width */
+﻿* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+body {
+  min-width: 310px;
   background-color: #fbf9ee;
-  font-family: 'Segoe UI';
-  font-size: 12px;
+  font-family: 'Segoe UI', sans-serif;
+  font-size: 1rem; /* Use rem for scalability */
 }
-#container .column {
-  position: relative;
-  float: left;
-}
-#container .label {
-  width: 60px;          /* LC width */
-  margin-left: 6px;
-  font-family: 'Segoe UI';
-  font-size: small;
-}
-#container .select {
-  width: 60px;          /* LC width */
-  margin-left: 6px;
-  font-family: 'Segoe UI';
-  font-size: 12px;
-}
+
 #container {
-  padding-left: 85px;   /* LC width */
-  padding-right: 150px;  /* RC width */
+  display: flex;
+  justify-content: space-between;
+  padding: 0 1rem; /* Add padding for spacing */
 }
+
+.column {
+  position: relative;
+  flex: 1; /* Use flexbox for responsive columns */
+}
+
+.label, .select, #tickertext {
+  font-family: 'Segoe UI', sans-serif;
+  font-size: 0.9rem; /* Consistent font size */
+  margin-left: 0.5rem;
+}
+
 #center {
-  width: 100%;
-  height: 95%;
+  flex: 3; /* Center column takes more space */
+  height: 95%; /* Adjust height */
 }
+
 #left {
-  width: 85px;          /* LC width */
-  right: 85px;          /* LC width */
-  margin-left: -100%;
+  flex: 1; /* Left column */
 }
+
 #right {
-  width: 150px;          /* RC width */
-  margin-right: -150px;  /* RC width */
+  flex: 1; /* Right column */
 }
+
 #footer {
   clear: both;
 }
+
 #header {
-  text-align :center;
+  text-align: center;
 }
+
 #frame {
-	width:100%;
-	height:95vh;
+  width: 100%;
+  height: calc(100vh - 20px); /* Adjust for better mobile compatibility */
 }
+
 #tickertext {
-  width: 55px;          /* LC width */
-  margin-left: 6px;
-  font-family: 'Segoe UI';
-  font-size: smaller;
+  width: 3.5rem; /* Use rem for width */
+  margin-left: 0.5rem;
 }
-#go{
-   margin-left: 6px;    
+
+#go {
+  margin-left: 6px;
 }
