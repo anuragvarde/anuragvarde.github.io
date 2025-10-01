@@ -1,7 +1,7 @@
 /// <reference path='./scripts/jquery-2.0.0-vsdoc.js' />
 
 function getSQURL(ticker, source) {
-    var localticker = ticker.toString().toUpperCase();
+    const localticker = encodeURIComponent(ticker.toString().toUpperCase());
     if (localticker !== "") {
         switch (source) {
             case "RT":
@@ -31,17 +31,20 @@ function getSQURL(ticker, source) {
 }
 
 function setFrameSrc(enteredticker, tickersrc) {
-    var URL = getSQURL(enteredticker, tickersrc);
+    const URL = getSQURL(enteredticker, tickersrc);
     if (URL !== "") {
         $('#center').html('<object id="frame" class="frame" type="text/html" data="' + URL + '"></object>');
-        var mywindow = window.open(URL, '_blank');
+        const mywindow = window.open(URL, '_blank');
         if (mywindow) mywindow.focus();
     }
 }
 
 function loadticker(ticker, tickersrc) {
     if (ticker !== "") {
-        tickertext.value = ticker.toString().toUpperCase();
+        const tickerInput = document.getElementById('tickertext');
+        if (tickerInput) {
+            tickerInput.value = ticker.toString().toUpperCase();
+        }
         setFrameSrc(ticker, tickersrc);
     }
 }
@@ -70,6 +73,5 @@ $(function () {
         if ($(this).attr('href') !== "") {
             $('#center').html('<object id="frame" class="frame" type="text/html" data="' + $(this).attr('href') + '"></object>');
         }
-        window.location.reload();
     });
 });
